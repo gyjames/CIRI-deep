@@ -46,3 +46,17 @@ python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_polyA.tsv -seqFeature .
 
 Basically, the input files are similar to CIRIdeep, excluding splicing amount related files. **Notably**, the `RBP max value file` file is different from that used in CIRIdeep and all the expression values should be derived from poly(A) selected RNA-seq data. Still, when using CIRIdeep(A), the order of RBP expression of each sample should keep exactly the same with `RBP max value file`.
 
+##Train##
+
+**CIRIdeep training**
+
+```
+python $script train -geneExp_absmax /path/to/file -seqFeature /path/to/file -splicing_max /path/to/file -outdir /out/path -RBP_dir /RBP/path -splicing_dir /splicing/path
+```
+Hyperparameters are given in `config.py`. `config.py` must be under the same directory with `CIRIdeep.py`. Resources are waiting to be loaded...
+
+**CIRIdeep(A) training**
+
+```
+python $script train -geneExp_absmax /path/to/file -seqFeature /path/to/file -outdir /out/path -RBP_dir /RBP/path --CIRIdeepA
+```
