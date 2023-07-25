@@ -60,3 +60,9 @@ Hyperparameters are given in `config.py`. `config.py` must be under the same dir
 ```
 python $script train -geneExp_absmax /path/to/file -seqFeature /path/to/file -outdir /out/path -RBP_dir /RBP/path --CIRIdeepA
 ```
+
+## Contact
+Zihan Zhou. zhouzihan2018m@big.ac.cn
+
+Please open an issue if you find bugs.
+
