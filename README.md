@@ -1,5 +1,6 @@
 # CIRIdeep
-CIRIdeep is a deep-learning model used to predict differentially spliced circRNAs between two biological samples using totalRNA sequencing data. An adapted version of CIRIdeep, CIRIdeepA, was trained for poly(A) selected RNA-seq data.
+- CIRIdeep is a deep-learning model used to predict differentially spliced circRNAs between two biological samples using totalRNA sequencing data. 
+- An adapted version of CIRIdeep, CIRIdeepA, was trained for poly(A) selected RNA-seq data.
 
 # Usage
 The main program `CIRIdeep.py` can be used to predict differentially spliced circRNAs with CIRIdeep or CIRIdeep(A) or train your own model.
