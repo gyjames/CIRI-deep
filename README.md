@@ -1,6 +1,14 @@
-# CIRIdeep
-- CIRIdeep is a deep-learning model used to predict differentially spliced circRNAs between two biological samples using totalRNA sequencing data. 
-- An adapted version of CIRIdeep, CIRIdeepA, was trained for poly(A) selected RNA-seq data.
+# CIRI-deep
+- CIRI-deep is a deep-learning model used to predict differentially spliced circRNAs between two biological samples using totalRNA sequencing data. 
+- An adapted version of CIRI-deep, CIRI-deepA, was trained for poly(A) selected RNA-seq data.
+
+# Installation
+The CIRI-deep model was constructed based on Keras. The `requirements.txt` was provided and the dependencies can be installed as the follow:
+```
+git clone https://github.com/gyjames/CIRIdeep.git
+cd CIRIdeep
+conda env create --name CIRIdeep --file ./requirements.txt
+```
 
 # Usage
 The main program `CIRIdeep.py` can be used to predict differentially spliced circRNAs with CIRIdeep or CIRIdeep(A) or train your own model.
@@ -52,14 +60,14 @@ Basically, the input files are similar to CIRIdeep, excluding splicing amount re
 **CIRIdeep training**
 
 ```
-python $script train -geneExp_absmax /path/to/file -seqFeature /path/to/file -splicing_max /path/to/file -outdir /out/path -RBP_dir /RBP/path -splicing_dir /splicing/path
+python CIRIdeep.py train -geneExp_absmax /path/to/file -seqFeature /path/to/file -splicing_max /path/to/file -outdir /out/path -RBP_dir /RBP/path -splicing_dir /splicing/path
 ```
 Hyperparameters are given in `config.py`. `config.py` must be under the same directory with `CIRIdeep.py`. Resources are waiting to be loaded...
 
 **CIRIdeep(A) training**
 
 ```
-python $script train -geneExp_absmax /path/to/file -seqFeature /path/to/file -outdir /out/path -RBP_dir /RBP/path --CIRIdeepA
+python CIRIdeep.py train -geneExp_absmax /path/to/file -seqFeature /path/to/file -outdir /out/path -RBP_dir /RBP/path --CIRIdeepA
 ```
 
 ## Contact
