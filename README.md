@@ -20,7 +20,7 @@ The main program `CIRIdeep.py` can be used to predict differentially spliced cir
 CIRIdeep provides probability of given circRNAs being differentially spliced between any of two samples. When predict with CIRIdeep, expression value of 1499 RBPs (listed in `./demo/RBPmax_totalRNA.tsv`) and splicing amount (derived from SAM alignment files) in both samples are needed. The order of RBP expression of each sample should keep exactly the same with `RBP max value file`. We recommend to process raw total RNA-seq fastq files with `CIRIquant`, which provides junction ratio of each circRNA and expression value of each gene in a one-stop manual. SAM files generated with BWA is recommended when producing splicing amount values.
 
 ```
-python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_totalRNA.tsv -seqFeature ./demo/cisfeature.tsv -splicing_max ./demo/splicingamountmax_max.tsv -predict_list ./demo/predict_list.txt -model_path ./model/CIRIdeep.h5 -outdir ./outdir -RBP_dir ./demo/RBPexp_total -splicing_dir ./demo/splicingamount
+python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_totalRNA.tsv -seqFeature ./demo/cisfeature.tsv -splicing_max ./demo/splicingamount_max.tsv -predict_list ./demo/predict_list.txt -model_path ./models/CIRIdeep.h5 -outdir ./outdir -RBP_dir ./demo/RBPexp_total -splicing_dir ./demo/splicingamount
 ```
 
 Several files are needed for prediction.
@@ -49,7 +49,7 @@ Order of samples (A, B) is the same with sample pair name given in  `predict lis
 As in some cases, like in scRNA-seq or spatial transcriptomics data, only gene expression matrix is provided, splicing amount is not needed in CIRIdeep(A) any more.
 
 ```
-python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_polyA.tsv -seqFeature ./demo/cisfeature.tsv -predict_list ./demo/predict_list.txt -model_path ./model/CIRIdeepA.h5 -outdir ./outdir -RBP_dir ./demo/RBPexp_polyA --CIRIdeepA
+python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_polyA.tsv -seqFeature ./demo/cisfeature.tsv -predict_list ./demo/predict_list.txt -model_path ./models/CIRIdeepA.h5 -outdir ./outdir -RBP_dir ./demo/RBPexp_polyA --CIRIdeepA
 ```
 `--CIRIdeepA` When predict using CIRIdeepA, this parameter is needed.
 
