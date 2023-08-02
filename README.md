@@ -7,7 +7,7 @@ The CIRI-deep model was constructed based on Keras. The `requirements.txt` was p
 ```
 git clone https://github.com/gyjames/CIRIdeep.git
 cd CIRIdeep
-conda env create --name CIRIdeep --file ./requirements.txt
+conda env create -n CIRIdeep -f ./environment.yaml
 ```
 
 # Usage
