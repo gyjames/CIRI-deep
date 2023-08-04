@@ -3,11 +3,12 @@
 - An adapted version of CIRI-deep, CIRI-deepA, was trained for poly(A) selected RNA-seq data.
 
 # Installation
-The CIRI-deep model was constructed based on Keras. The `requirements.txt` was provided and the dependencies can be installed as the follow:
+The CIRI-deep model was constructed based on Keras. The `environment.yaml` was provided and the dependencies can be installed as the follow:
 ```
 git clone https://github.com/gyjames/CIRIdeep.git
 cd CIRIdeep
-conda env create --name CIRIdeep --file ./requirements.txt
+conda env create -n CIRIdeep -f ./environment.yaml
+conda activate CIRIdeep
 ```
 
 # Usage
