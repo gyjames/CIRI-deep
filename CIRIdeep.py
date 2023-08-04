@@ -887,6 +887,9 @@ def main():
         clf = load_model(model_path)
         test_list = read_train_list(test_fn)
         
+        if not os.path.isdir(out_dir):
+            os.mkdir(out_dir)
+        
         print('Prediction...')
         for i in range(len(test_list)):
             inputfile = test_list.label_fn[i]
