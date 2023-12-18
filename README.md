@@ -61,6 +61,7 @@ Basically, the input files are similar to CIRIdeep, excluding splicing amount re
 Here we gave necessary instructions for generating the input files from different datasets.
 
 **RBP expression of total RNA-seq data**
+
 There are two columns in RBP expression level file, the first column identify gene symbols and the second column gives expression level of the RBP in TPM. The order of genes should keep exactly the same with `demo/RBPmax_totalRNA.tsv`.
 
 | Gene Name | TPM |
