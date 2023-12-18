@@ -41,7 +41,7 @@ CircRNAs are given as coodination on `hg19` genome, like `chr10:102683732|102685
 
 `-RBP_dir` Directory containing the RBP expression value in TPM of samples to be predicted.
 
-`-splicing_dir` Directory containing the splicing amount of circRNAs to be predicted in each sample. We have provided a basic script `script_splicingamount.py` to produce splicing amount in samples.
+`-splicing_dir` Directory containing the splicing amount of circRNAs to be predicted in each sample. 
 
 **Prediction with CIRIdeep(A) using poly(A) selected RNA-seq data**
 
@@ -68,6 +68,10 @@ There are two columns in RBP expression level file, the first column identify ge
 |------|-------|
 |A1CF|12.5|
 |AAR2|23.9|
+
+**Splicing amount**
+
+Feature of splicing amount is used in CIRI-deep. We have provided a basic script `script_splicingamount.py` to produce splicing amount in samples.
 
 **RBP expressin of poly(A) RNA-seq data**
 
