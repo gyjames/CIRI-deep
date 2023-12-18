@@ -56,6 +56,34 @@ python CIRIdeep.py predict -geneExp_absmax ./demo/RBPmax_polyA.tsv -seqFeature .
 
 Basically, the input files are similar to CIRIdeep, excluding splicing amount related files. **Notably**, the `RBP max value file` file is different from that used in CIRIdeep and all the expression values should be derived from poly(A) selected RNA-seq data. Still, when using CIRIdeep(A), the order of RBP expression of each sample should keep exactly the same with `RBP max value file`.
 
+**Generation of input files**
+
+Here we gave necessary instructions for generating the input files from different datasets.
+
+**RBP expression of total RNA-seq data**
+There are two columns in RBP expression level file, the first column identify gene symbols and the second column gives expression level of the RBP in TPM. The order of genes should keep exactly the same with `demo/RBPmax_totalRNA.tsv`.
+
+| Gene Name | TPM |
+|------|-------|
+|A1CF|12.5|
+|AAR2|23.9|
+
+**RBP expressin of poly(A) RNA-seq data**
+
+The format is as same as the RBP expression file used in total RNA-seq data. The order of genes should keep exactly the same with `demo/RBPmax_polyA.tsv`.
+
+**RBP expression of single-cell RNA-seq data**
+
+When analyzing differentially spliced circRNA between cell clusters, the mean value of RBP expression level in CPM or TPM was used. The order of genes should keep exactly the same with `demo/RBPmax_polyA.tsv`
+
+**RBP expression of spatial transcriptome data**
+
+We recommend to perform imputation step before extracting expression level of RBPs. Tangram, gimVI and SpaGE were greate choices. After imputation, the gene expression value should be normalized as: $$Exp^i = Exp_{imputed}^i / \Sigma Exp_{imputed}^i*scalefactor$$
+
+We used 300,000 as scale factor here. The order of genes should keep exactly the same with `demo/RBPmax_polyA.tsv`
+
+
+
 ## Train
 
 **CIRIdeep training**
