@@ -10,6 +10,7 @@ cd CIRIdeep
 conda env create -n CIRIdeep -f ./environment.yaml
 conda activate CIRIdeep
 ```
+The cis features of circRNAs were provided [here](https://mega.nz/file/l2szRb7B#HuAAY0VNCKhTfD3d1WplvUoINNqaLIC8Y8IqvpHcd2U).
 
 # Usage
 The main program `CIRIdeep.py` can be used to predict differentially spliced circRNAs with CIRIdeep or CIRIdeep(A) or train your own model.
